@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-image: url("img/DETAIL.avif");
+            font-family: Arial, sans-serif;
+            background-color: #d99292;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #doctor-list {
+            margin: 20px auto;
+            width: 80%;
+            background-color: rgb(231, 206, 206);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 5px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        li img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        li h2 {
+            margin: 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+        .show-more-button:hover {
+background-color:#a2371ffc !important ;
+    }
+    </style>
+</head>
+<body>
+    <h1>Doctor List</h1>
+    
+    <div id="doctor-list">
+        <ul>
+            <li>
+                <img src="img/IMG_2019.JPG" alt="Doctor 1">
+                <div class="doctor-info">
+                    <h2>Dr. UMESH</h2>
+                    <p>hello iam umesh a doctor and i work at veltech hospital </p>
+                    <p>Cardiologist</p>
+                </div>
+                <button class="show-more-button">Show More</button>
+            </li>
+            <li>
+                <img src="img/images (1).jpg" alt="Doctor 1">
+                <div class="doctor-info">
+                    <h2>Dr. SATYAM</h2>
+                    <p>hello iam satyam a doctor and i work at veltech hospital </p>
+                    <p>Cardiologist</p>
+                </div>
+                <button class="show-more-button">Show More</button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.show-more-button').click(function() {
+                $(this).prev('.doctor-info').toggleClass('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

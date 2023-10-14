@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body {
+      background-image: url("img/DETAIL.avif");
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #contact-info {
+            margin: 20px auto;
+            width: 80%;
+            background-color: rgba(232, 216, 216, 0.004);
+            box-shadow: 0px 0px 5px rgba(200, 70, 70, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .contact-details {
+            font-size: 16px;
+            color: #0b0404;
+            margin-bottom: 10px;
+        }
+
+        #show-contact-button {
+            padding: 10px 20px;
+            background-color: #eff2f400;
+            color: rgb(20, 13, 13);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        #show-contact-button:hover {
+            background-color: #118783;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div id="contact-info">
+        
+        <div class="contact-details hidden">
+            <p>Email: 09team@gmail.com</p>
+            <p>Phone: +91 1234567890</p>
+            <p>Address: morai no.42, chennai, india</p>
+        </div>
+        <button id="show-contact-button">Show Contact Details</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var showContactButton = document.getElementById('show-contact-button');
+            var contactDetails = document.querySelector('.contact-details');
+
+            showContactButton.addEventListener('click', function() {
+                contactDetails.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
